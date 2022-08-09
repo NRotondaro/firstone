@@ -53,7 +53,6 @@ const Navbar = () => {
             <Link
               to="/contact"
               className="btn"
-              activeClassName="active-link"
               onClick={() => setShow(false)}
             >
               contact
