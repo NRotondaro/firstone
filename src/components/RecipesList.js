@@ -9,7 +9,7 @@ const RecipesList = ({ recipes = [] }) => {
         const { id, title, image, prepTime, cookTime } = recipe
         const pathToImage = getImage(image)
         return (
-          <Link to={`/${title}`} key={id}>
+          <Link to={`/${title}`} key={id} className="recipe">
             <GatsbyImage
               image={pathToImage}
               className="recipe-img"
