@@ -19,21 +19,84 @@ const RecipeTemplate = ({ data }) => {
               alt={title}
               className="about-img"
             />
+            <article className="recipe-info">
+              <h2>{title}</h2>
+              <p>
+                Tattooed you probably haven't heard of them everyday carry
+                truffaut, waistcoat DIY dreamcatcher JOMO kitsch schlitz pok pok
+                3 wolf moon direct trade single-origin coffee. Taxidermy forage
+                snackwave meditation normcore williamsburg sustainable organic.
+                Kogi raclette food truck locavore PBR&B cornhole meditation
+                squid chambray celiac cred brunch mukbang tumeric. Biodiesel
+                hexagon hashtag cloud bread, pour-over franzen flexitarian JOMO
+                90's.
+              </p>
+              <div className="recipe-icons">
+                <article>
+                  <BsClock />
+                  <h5>prep time</h5>
+                  <p>{prepTime} min.</p>
+                </article>
+                <article>
+                  <BsClockHistory />
+                  <h5>cook time</h5>
+                  <p>{cookTime} min.</p>
+                </article>
+                <article>
+                  <BsPeople />
+                  <h5>servings</h5>
+                  <p>{servings}</p>
+                </article>
+              </div>
+              <p className="recipe-tags">
+                Tags:{" "}
+                {tags.map((tag, index) => {
+                  return (
+                    <Link to={`/${tag}`} key={index}>
+                      {tag}
+                    </Link>
+                  )
+                })}
+              </p>
+            </article>
           </section>
           <section className="recipe-content">
-            <h2>{title}</h2>
-            <p>{}</p>
-            <div className="recipe-icons"></div>
-            <p className="recipe-tags">
-              Tags:{" "}
-              {tags.map((tag, index) => {
+            <article className="first-column">
+              <h4>instructions</h4>
+              {instructions.map((instruction, index) => {
                 return (
-                  <Link to={`/${tag}`} key={index}>
-                    {tag}
-                  </Link>
+                  <div key={index} className="single-instruction">
+                    <header>
+                      <p>step {index + 1}</p>
+                      <div></div>
+                    </header>
+                    <p>{instruction}</p>
+                  </div>
                 )
               })}
-            </p>
+            </article>
+            <article className="second-column">
+              <div>
+                <h4>ingredients</h4>
+                {ingredients.map((ingredient, index) => {
+                  return (
+                    <div key={index}>
+                      <p className="single-ingredient">{ingredient}</p>
+                    </div>
+                  )
+                })}
+              </div>
+              <div>
+                <h4>tools</h4>
+                {tools.map((tool, index) => {
+                  return (
+                    <div key={index}>
+                      <p className="single-tool">{tool}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </article>
           </section>
         </div>
       </main>
