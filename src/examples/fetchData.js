@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const getData = graphql`
   query FirstQuery {
@@ -20,19 +20,19 @@ const getData = graphql`
       }
     }
   }
-`
+`;
 
 const FetchData = () => {
   const {
     site: {
       info: { title },
     },
-  } = useStaticQuery(getData)
+  } = useStaticQuery(getData);
   return (
     <div>
       <h2>Site title is: {title}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default FetchData
+export default FetchData;

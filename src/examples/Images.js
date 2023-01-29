@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Images = () => {
   return (
@@ -8,40 +8,40 @@ const Images = () => {
       <article>
         <h4>constrained / default</h4>
         <StaticImage
-          src="../assets/images/recipe-1.jpeg"
-          alt="food"
-          placeholder="tracedSVG"
-          layout="constrained"
-          class="example-img"
-          as="section"
+          src='../assets/images/recipe-1.jpeg'
+          alt='food'
+          placeholder='tracedSVG'
+          layout='constrained'
+          class='example-img'
+          as='section'
         />
       </article>
       <article>
         <h4>fixed</h4>
         <StaticImage
-          src="../assets/images/recipe-1.jpeg"
-          alt="food"
-          placeholder="blurred"
-          layout="fixed"
+          src='../assets/images/recipe-1.jpeg'
+          alt='food'
+          placeholder='blurred'
+          layout='fixed'
           width={200}
-          class="example-img"
-          as="div"
+          class='example-img'
+          as='div'
         />
       </article>
       <article>
         <h4>full width</h4>
         <StaticImage
-          src="../assets/images/recipe-1.jpeg"
-          alt="food"
-          placeholder="dominantColor"
-          layout="fullWidth"
-          class="example-img"
-          as="article"
+          src='../assets/images/recipe-1.jpeg'
+          alt='food'
+          placeholder='dominantColor'
+          layout='fullWidth'
+          class='example-img'
+          as='article'
         />
       </article>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   width: 70vw;
@@ -62,6 +62,6 @@ const Wrapper = styled.section`
       height: 200px;
     }
   }
-`
+`;
 
-export default Images
+export default Images;

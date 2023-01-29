@@ -3,23 +3,23 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    title: "Simply Recipes",
-    description: "Nice and clean recipes site",
-    author: "@nikson",
+    title: 'Simply Recipes',
+    description: 'Nice and clean recipes site',
+    author: '@nikson',
     person: {
-      name: "nikson",
+      name: 'nikson',
       age: 21,
     },
-    simpleData: ["item1", "item2"],
+    simpleData: ['item1', 'item2'],
     complexData: [
-      { name: "nikson", age: 21 },
-      { name: "rotondaro", age: 22 },
+      { name: 'nikson', age: 21 },
+      { name: 'rotondaro', age: 22 },
     ],
   },
   plugins: [
@@ -43,4 +43,4 @@ module.exports = {
       },
     },
   ],
-}
+};
